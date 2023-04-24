@@ -44,7 +44,7 @@
 		},
 		bindEvent: function() {
 			var _this = this;
-			this.target.click(function() {
+			this.target.focus(function() {
 				if (_this.settings.autoShow) {
 					_this.search();
 				}
