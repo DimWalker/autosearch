@@ -44,7 +44,7 @@
 		},
 		bindEvent: function() {
 			var _this = this;
-			this.target.focus(function() {
+			this.target.click(function() {
 				if (_this.settings.autoShow) {
 					_this.search();
 				}
@@ -52,6 +52,9 @@
 			});
 			this.input.on('focus', function() {
 				var input = $(this);
+				if (_this.settings.autoShow) {
+					_this.search();
+				}
 				// _this.timer && clearInterval(_this.timer);
 				// _this.timer = setInterval(function() {
 				// 	if (input.data('old') != input.val()) {
